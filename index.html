@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Grade Calculator</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <h1 id="header"> Student</h1>
+    <script src="script.js"></script>
+    <div id="grades_percentage">
+      <h1>Grades percentage</h1>
+      <ul style="list-style-type:none;">
+        <li>Participation - <span class="percent" id="ParticipationPercent">10<span>%</li>
+        <li>Homework - <span class="percent" id="HomeworkPercent">20<span>%</li>
+        <li>Project Milestone 1 - <span class="percent" id="ProjectMilestone1Percent">20<span>%</li>
+        <li>Project Milestone 2 - <span class="percent" id="ProjectMilestone2Percent">20<span>%</li>
+        <li>Project Milestone Final - <span class="percent" id="ProjectFinalPercent">30<span>%</li>
+      </ul>
+    </div>
+    <div id="student_grades">
+      <h1>Student grades</h1>
+      <ul style="list-style-type: none;">
+        <li>Student Participation -<input type="text" size= "2"  id=ParticipationGrade></li>
+        <li>Student Homework - <input type="text" size= "2" id=HomeworkGrade></li>
+        <li>Student Project Milestone 1 -<input type="text" size= "2" id=ProjectMilestone1Grade></li>
+        <li>Student Project Milestone 2 - <input type="text" size= "2" id=ProjectMilestone2Grade></li>
+        <li>Student Project Final - <input type="text" size= "2" id=ProjectFinalGrade></li>
+      </ul>
+  
+   
+   
+      <h1>Final Grade</h1>
+      <button onclick="CalculateGrade()">Calculate Grade</button>
+      <h4>My Current Grade is <span id=CurrentGrade>...</span></h4>
+    </div>
+  
+  </body>
+</html>
