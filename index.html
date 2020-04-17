@@ -7,8 +7,13 @@
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <h1 id="header"> Student</h1>
     <script src="script.js"></script>
+    <div id="header">
+      <h1>Student</h1>
+      <h2>Name: Gayane Amirjanyan</h2>
+      <h2>Course: Intro to the World of Programming 120</h2>
+    </div>
+
     <div id="grades_percentage">
       <h1>Grades percentage</h1>
       <ul style="list-style-type:none;">
@@ -19,21 +24,43 @@
         <li>Project Milestone Final - <span class="percent" id="ProjectFinalPercent">30<span>%</li>
       </ul>
     </div>
+
     <div id="student_grades">
-      <h1>Student grades</h1>
-      <ul style="list-style-type: none;">
-        <li>Student Participation -<input type="text" size= "2"  id=ParticipationGrade></li>
-        <li>Student Homework - <input type="text" size= "2" id=HomeworkGrade></li>
-        <li>Student Project Milestone 1 -<input type="text" size= "2" id=ProjectMilestone1Grade></li>
-        <li>Student Project Milestone 2 - <input type="text" size= "2" id=ProjectMilestone2Grade></li>
-        <li>Student Project Final - <input type="text" size= "2" id=ProjectFinalGrade></li>
-      </ul>
-  
-   
-   
-      <h1>Final Grade</h1>
-      <button onclick="CalculateGrade()">Calculate Grade</button>
-      <h4>My Current Grade is <span id=CurrentGrade>...</span></h4>
+      <table>
+        <h1>Student Grades</h1>
+        <p>Please input your grades</p>
+        <table style="width:50%" align="center" id="student_grades">
+          <tr>
+            <th>Assignments</th>
+            <th>Grades</th>
+          </tr>
+          <tr>
+            <td>Student Participation</td>
+            <td><input type="number" id="ParticipationGrade" onkeyup="checkGrade(event)"></td>
+          </tr>
+          <tr>
+            <td>Student Homework</td>
+            <td><input type="number" id="HomeworkGrade" onkeyup="checkGrade(event)"></td>
+          </tr>
+          <tr>
+            <td>Student Project Milestone 1</td>
+            <td><input type="number" id="ProjectMilestone1Grade" onkeyup="checkGrade(event)"></td>
+          </tr>
+          <tr>
+            <td>Student Project Milestone 2</td>
+            <td><input type="number" id="ProjectMilestone2Grade" onkeyup="checkGrade(event)"></td>
+          </tr>
+          <tr>
+            <td>Student Project Milestone Final</td>
+            <td><input type="number" id="ProjectFinalGrade" onkeyup="checkGrade(event)"></td>
+          </tr>
+      </table>
+    </div>
+
+    <div>
+    <h1>Final Grade</h1>
+    <button onclick="CalculateGrade()">Calculate Grade</button>
+    <h2>My Current Grade is <span id=CurrentGrade>...</span></h2>
     </div>
   
   </body>
